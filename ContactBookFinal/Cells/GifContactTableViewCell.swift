@@ -16,6 +16,7 @@ class GifContactTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //dewdasdsfs
         // Initialization code
     }
 
