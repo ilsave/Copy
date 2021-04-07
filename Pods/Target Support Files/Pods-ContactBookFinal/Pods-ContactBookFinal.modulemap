@@ -1,0 +1,6 @@
+framework module Pods_ContactBookFinal {
+  umbrella header "Pods-ContactBookFinal-umbrella.h"
+
+  export *
+  module * { export * }
+}
