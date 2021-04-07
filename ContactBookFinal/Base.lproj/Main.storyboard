@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3cx-HH-4CA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="fyA-jn-Ot3">
+            <objects>
+                <navigationController id="56E-Jl-Qan" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RyL-yW-dvQ"/>
+                    <navigationItem key="navigationItem" id="Y4K-1o-dKa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6HB-DD-OIE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t0n-RL-5iW" kind="relationship" relationship="rootViewController" id="I9x-dW-PaH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbP-A6-aE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087" y="157"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="DST-89-bu6">
+            <objects>
+                <viewController id="t0n-RL-5iW" customClass="ViewControllerContacts" customModule="ContactBookFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xYN-Hq-0wG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="dw5-ku-Myq">
+                                <rect key="frame" x="0.0" y="408" width="414" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KeG-RE-Q3t">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DRw-Pe-adw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KeG-RE-Q3t" firstAttribute="leading" secondItem="DRw-Pe-adw" secondAttribute="leading" id="DC2-ro-Woi"/>
+                            <constraint firstItem="DRw-Pe-adw" firstAttribute="bottom" secondItem="KeG-RE-Q3t" secondAttribute="bottom" id="IKA-5r-Flm"/>
+                            <constraint firstItem="KeG-RE-Q3t" firstAttribute="top" secondItem="DRw-Pe-adw" secondAttribute="top" id="bcq-bZ-zQt"/>
+                            <constraint firstItem="DRw-Pe-adw" firstAttribute="trailing" secondItem="KeG-RE-Q3t" secondAttribute="trailing" id="bzr-2j-tp8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.3.fill" catalog="system" id="ShS-4D-hel"/>
+                    <navigationItem key="navigationItem" id="VNJ-Rw-Oet">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="KCy-gs-VD5">
+                            <connections>
+                                <action selector="newContactPressed:" destination="t0n-RL-5iW" id="Y7Q-Me-0P0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="indicator" destination="dw5-ku-Myq" id="oqF-fg-BM0"/>
+                        <outlet property="tableViewContacts" destination="KeG-RE-Q3t" id="6ez-7T-FS8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CN4-bK-UiK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110.14492753623189" y="156.69642857142856"/>
+        </scene>
+        <!--Contact Tab Bar Controller-->
+        <scene sceneID="qOR-R2-ekk">
+            <objects>
+                <tabBarController id="3cx-HH-4CA" customClass="ContactTabBarController" customModule="ContactBookFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eIJ-cT-zjr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="56E-Jl-Qan" kind="relationship" relationship="viewControllers" id="Z1Z-w5-QNP"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Pyj-Oe-3SX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYF-7N-pnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2061" y="475"/>
+        </scene>
+        <!--Recent Calls-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RecentCallsViewController" customModule="ContactBookFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zS9-1y-GQz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zS9-1y-GQz" secondAttribute="bottom" id="21S-ML-cTf"/>
+                            <constraint firstItem="zS9-1y-GQz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2i3-g7-t2e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zS9-1y-GQz" secondAttribute="trailing" id="G9i-5x-Shi"/>
+                            <constraint firstItem="zS9-1y-GQz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="voU-Cl-rfI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recent Calls" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="oeo-VS-6bw"/>
+                    <navigationItem key="navigationItem" id="ht7-eG-Tl7"/>
+                    <connections>
+                        <outlet property="tableViewRecentCalls" destination="zS9-1y-GQz" id="r7T-ak-6NC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110" y="827"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
