@@ -103,13 +103,6 @@
 			path = "Other UI";
 			sourceTree = "<group>";
 		};
-		6904BC43261B1A59002F98E8 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
 		690FA7BD261A368C005F21AB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +157,6 @@
 				69C0CF0B261463DD000B466D /* LaunchScreen.storyboard */,
 				69C0CF0E261463DD000B466D /* Info.plist */,
 				69C0CF06261463DC000B466D /* ContactBookFinal.xcdatamodeld */,
-				6904BC43261B1A59002F98E8 /* Other */,
 				6904BC42261B1A1B002F98E8 /* Other UI */,
 				69C0CF3D26148934000B466D /* Async.swift */,
 				69C0CF4726158EA8000B466D /* Settings.bundle */,

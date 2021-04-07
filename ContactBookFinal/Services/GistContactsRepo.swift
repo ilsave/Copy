@@ -85,7 +85,6 @@ class GistContactsRepo: ContactsRepository {
             }
             
             do {
-                print(data.count)
                 self.contacts = try self.decoder.decode([ContactsResponse].self, from: data).map {
                     Contact(recordId: UUID().uuidString,
                             firstName: $0.firstname,
@@ -104,7 +103,6 @@ class GistContactsRepo: ContactsRepository {
                     return []
                 }
         
-        sem.wait()
         
         
         if let error = resultError {

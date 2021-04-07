@@ -98,14 +98,14 @@ extension ViewControllerContacts: UITableViewDataSource {
         cell.nameLabel?.text = contacts[indexPath.row].firstName
         cell.surNameLabel?.text = contacts[indexPath.row].lastName
         
-        let tapGesture = MyTapGesture(target: self,  action: #selector(doubleTapped))
+        let tapGesture = MyTapGesture(target: self,  action: #selector(onTap))
         tapGesture.customCirle = cell.customCirle
           cell.customCirle.addGestureRecognizer(tapGesture)
         
         return cell
     }
     
-    @objc func doubleTapped(sender : MyTapGesture) {
+    @objc func onTap(sender : MyTapGesture) {
         let countScale: CGFloat = 1.9
         let duration = 1.0
         let delay: TimeInterval = 0
