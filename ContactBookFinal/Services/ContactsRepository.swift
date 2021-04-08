@@ -32,7 +32,6 @@ struct ContactNotification {
 protocol ContactsRepository {
     
     func getContacts() throws -> [Contact]
-    
     func add(contact: ContactsData) throws
     func delete(contact: Contact) throws
     func update(contact: Contact) throws
